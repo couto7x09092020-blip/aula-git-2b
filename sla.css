@@ -1,0 +1,45 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    display: felx;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+svg
+{
+    position: absolute;
+    width: 400px;
+    fill: none;
+}
+svg:nth-child(2)
+{
+    filter: blur(40px)
+}
+svg path
+{
+    d: path("M0, 25 C150,110 150, -60 300,25");
+    stroke: #87CEEB;
+    stroke-width: 50;
+    stroke-Linecap: round;
+    transform: translate(50px, 50%);
+    animation: animate 2s ease-in-out infinite;
+}
+@Keyframes animate
+{
+    0%
+    {
+        stroke: #87CEEB;
+        d: path("M0, 25 C150,110 150,-60 300,25");
+    }
+    50%
+    {
+        stroke: #D2691E;
+        d: path("M0, 25 C160,-50 140,110 300,25");
+    }
+}
